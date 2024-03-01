@@ -1,648 +1,651 @@
-import { defineConfig } from 'vitepress';
-import { createWriteStream } from 'fs';
-import { resolve } from 'path';
-import { SitemapStream } from 'sitemap';
+import { defineConfig } from "vitepress";
+import { createWriteStream } from "fs";
+import { resolve } from "path";
+import { SitemapStream } from "sitemap";
 
-const BASE = process.env.BASE_URL || '/';
+const BASE = process.env.BASE_URL || "/";
 
 const links = [];
-const PROD_BASE_URL = 'https://automatisch.io/docs';
+const PROD_BASE_URL = "https://automatisch.io/docs";
 
 export default defineConfig({
   base: BASE,
-  lang: 'en-US',
-  title: 'Automatisch Docs',
+  lang: "en-US",
+  title: "Automatisch Docs",
   description:
-    'Build workflow automation without spending time and money. No code is required.',
-  cleanUrls: 'with-subfolders',
+    "Build workflow automation without spending time and money. No code is required.",
+  cleanUrls: "with-subfolders",
   ignoreDeadLinks: true,
   themeConfig: {
-    siteTitle: 'LinkHub',
+    siteTitle: "LinkHub",
     nav: [
       {
-        text: 'Guide',
-        link: '/',
-        activeMatch: '^/$|^/guide/',
+        text: "Guide",
+        link: "/",
+        activeMatch: "^/$|^/guide/",
       },
       {
-        text: 'Apps',
-        link: '/apps/carbone/connection',
-        activeMatch: '/apps/',
+        text: "Apps",
+        link: "/apps/carbone/connection",
+        activeMatch: "/apps/",
       },
     ],
     sidebar: {
-      '/apps/': [
+      "/apps/": [
         {
-          text: 'Carbone',
+          text: "Carbone",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/carbone/actions' },
-            { text: 'Connection', link: '/apps/carbone/connection' },
+            { text: "Actions", link: "/apps/carbone/actions" },
+            { text: "Connection", link: "/apps/carbone/connection" },
           ],
         },
         {
-          text: 'DeepL',
+          text: "DeepL",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/deepl/actions' },
-            { text: 'Connection', link: '/apps/deepl/connection' },
+            { text: "Actions", link: "/apps/deepl/actions" },
+            { text: "Connection", link: "/apps/deepl/connection" },
           ],
         },
         {
-          text: 'Delay',
+          text: "Delay",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/delay/actions' },
-            { text: 'Connection', link: '/apps/delay/connection' },
+            { text: "Actions", link: "/apps/delay/actions" },
+            { text: "Connection", link: "/apps/delay/connection" },
           ],
         },
         {
-          text: 'Discord',
+          text: "Discord",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/discord/actions' },
-            { text: 'Connection', link: '/apps/discord/connection' },
+            { text: "Actions", link: "/apps/discord/actions" },
+            { text: "Connection", link: "/apps/discord/connection" },
           ],
         },
         {
-          text: 'Dropbox',
+          text: "Dropbox",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/dropbox/actions' },
-            { text: 'Connection', link: '/apps/dropbox/connection' },
+            { text: "Actions", link: "/apps/dropbox/actions" },
+            { text: "Connection", link: "/apps/dropbox/connection" },
           ],
         },
         {
-          text: 'Filter',
+          text: "Filter",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/filter/actions' },
-            { text: 'Connection', link: '/apps/filter/connection' },
+            { text: "Actions", link: "/apps/filter/actions" },
+            { text: "Connection", link: "/apps/filter/connection" },
           ],
         },
         {
-          text: 'Flickr',
+          text: "Flickr",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/flickr/triggers' },
-            { text: 'Connection', link: '/apps/flickr/connection' },
+            { text: "Triggers", link: "/apps/flickr/triggers" },
+            { text: "Connection", link: "/apps/flickr/connection" },
           ],
         },
         {
-          text: 'Formatter',
+          text: "Formatter",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/formatter/actions' },
-            { text: 'Connection', link: '/apps/formatter/connection' },
+            { text: "Actions", link: "/apps/formatter/actions" },
+            { text: "Connection", link: "/apps/formatter/connection" },
           ],
         },
         {
-          text: 'Ghost',
+          text: "Ghost",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/ghost/triggers' },
-            { text: 'Connection', link: '/apps/ghost/connection' },
+            { text: "Triggers", link: "/apps/ghost/triggers" },
+            { text: "Connection", link: "/apps/ghost/connection" },
           ],
         },
         {
-          text: 'GitHub',
+          text: "GitHub",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/github/triggers' },
-            { text: 'Actions', link: '/apps/github/actions' },
-            { text: 'Connection', link: '/apps/github/connection' },
+            { text: "Triggers", link: "/apps/github/triggers" },
+            { text: "Actions", link: "/apps/github/actions" },
+            { text: "Connection", link: "/apps/github/connection" },
           ],
         },
         {
-          text: 'GitLab',
+          text: "GitLab",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/gitlab/triggers' },
-            { text: 'Connection', link: '/apps/gitlab/connection' },
+            { text: "Triggers", link: "/apps/gitlab/triggers" },
+            { text: "Connection", link: "/apps/gitlab/connection" },
           ],
         },
         {
-          text: 'Google Calendar',
+          text: "Google Calendar",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/google-calendar/triggers' },
-            { text: 'Connection', link: '/apps/google-calendar/connection' },
+            { text: "Triggers", link: "/apps/google-calendar/triggers" },
+            { text: "Connection", link: "/apps/google-calendar/connection" },
           ],
         },
         {
-          text: 'Google Drive',
+          text: "Google Drive",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/google-drive/triggers' },
-            { text: 'Connection', link: '/apps/google-drive/connection' },
+            { text: "Triggers", link: "/apps/google-drive/triggers" },
+            { text: "Connection", link: "/apps/google-drive/connection" },
           ],
         },
         {
-          text: 'Google Forms',
+          text: "Google Forms",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/google-forms/triggers' },
-            { text: 'Connection', link: '/apps/google-forms/connection' },
+            { text: "Triggers", link: "/apps/google-forms/triggers" },
+            { text: "Connection", link: "/apps/google-forms/connection" },
           ],
         },
         {
-          text: 'Google Sheets',
+          text: "Google Sheets",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/google-sheets/triggers' },
-            { text: 'Actions', link: '/apps/google-sheets/actions' },
-            { text: 'Connection', link: '/apps/google-sheets/connection' },
+            { text: "Triggers", link: "/apps/google-sheets/triggers" },
+            { text: "Actions", link: "/apps/google-sheets/actions" },
+            { text: "Connection", link: "/apps/google-sheets/connection" },
           ],
         },
         {
-          text: 'HTTP Request',
+          text: "HTTP Request",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/http-request/actions' },
-            { text: 'Connection', link: '/apps/http-request/connection' },
+            { text: "Actions", link: "/apps/http-request/actions" },
+            { text: "Connection", link: "/apps/http-request/connection" },
           ],
         },
         {
-          text: 'HubSpot',
+          text: "HubSpot",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/hubspot/actions' },
-            { text: 'Connection', link: '/apps/hubspot/connection' },
+            { text: "Actions", link: "/apps/hubspot/actions" },
+            { text: "Connection", link: "/apps/hubspot/connection" },
           ],
         },
         {
-          text: 'Invoice Ninja',
+          text: "Invoice Ninja",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/invoice-ninja/triggers' },
-            { text: 'Actions', link: '/apps/invoice-ninja/actions' },
-            { text: 'Connection', link: '/apps/invoice-ninja/connection' },
+            { text: "Triggers", link: "/apps/invoice-ninja/triggers" },
+            { text: "Actions", link: "/apps/invoice-ninja/actions" },
+            { text: "Connection", link: "/apps/invoice-ninja/connection" },
           ],
         },
         {
-          text: 'Mattermost',
+          text: "Mattermost",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/mattermost/actions' },
-            { text: 'Connection', link: '/apps/mattermost/connection' },
+            { text: "Actions", link: "/apps/mattermost/actions" },
+            { text: "Connection", link: "/apps/mattermost/connection" },
           ],
         },
         {
-          text: 'Miro',
+          text: "Miro",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/miro/actions' },
-            { text: 'Connection', link: '/apps/miro/connection' },
+            { text: "Actions", link: "/apps/miro/actions" },
+            { text: "Connection", link: "/apps/miro/connection" },
           ],
         },
         {
-          text: 'Notion',
+          text: "Notion",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/notion/triggers' },
-            { text: 'Actions', link: '/apps/notion/actions' },
-            { text: 'Connection', link: '/apps/notion/connection' },
+            { text: "Triggers", link: "/apps/notion/triggers" },
+            { text: "Actions", link: "/apps/notion/actions" },
+            { text: "Connection", link: "/apps/notion/connection" },
           ],
         },
         {
-          text: 'Ntfy',
+          text: "Ntfy",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/ntfy/actions' },
-            { text: 'Connection', link: '/apps/ntfy/connection' },
+            { text: "Actions", link: "/apps/ntfy/actions" },
+            { text: "Connection", link: "/apps/ntfy/connection" },
           ],
         },
         {
-          text: 'Odoo',
+          text: "Odoo",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/odoo/actions' },
-            { text: 'Connection', link: '/apps/odoo/connection' },
+            { text: "Actions", link: "/apps/odoo/actions" },
+            { text: "Connection", link: "/apps/odoo/connection" },
           ],
         },
         {
-          text: 'OpenAI',
+          text: "OpenAI",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/openai/actions' },
-            { text: 'Connection', link: '/apps/openai/connection' },
+            { text: "Actions", link: "/apps/openai/actions" },
+            { text: "Connection", link: "/apps/openai/connection" },
           ],
         },
         {
-          text: 'Pipedrive',
+          text: "Pipedrive",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/pipedrive/triggers' },
-            { text: 'Actions', link: '/apps/pipedrive/actions' },
-            { text: 'Connection', link: '/apps/pipedrive/connection' },
+            { text: "Triggers", link: "/apps/pipedrive/triggers" },
+            { text: "Actions", link: "/apps/pipedrive/actions" },
+            { text: "Connection", link: "/apps/pipedrive/connection" },
           ],
         },
         {
-          text: 'Placetel',
+          text: "Placetel",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/placetel/triggers' },
-            { text: 'Connection', link: '/apps/placetel/connection' },
+            { text: "Triggers", link: "/apps/placetel/triggers" },
+            { text: "Connection", link: "/apps/placetel/connection" },
           ],
         },
         {
-          text: 'PostgreSQL',
+          text: "PostgreSQL",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/postgresql/actions' },
-            { text: 'Connection', link: '/apps/postgresql/connection' },
+            { text: "Actions", link: "/apps/postgresql/actions" },
+            { text: "Connection", link: "/apps/postgresql/connection" },
           ],
         },
         {
-          text: 'Pushover',
+          text: "Pushover",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/pushover/actions' },
-            { text: 'Connection', link: '/apps/pushover/connection' },
+            { text: "Actions", link: "/apps/pushover/actions" },
+            { text: "Connection", link: "/apps/pushover/connection" },
           ],
         },
         {
-          text: 'Reddit',
+          text: "Reddit",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/reddit/triggers' },
-            { text: 'Actions', link: '/apps/reddit/actions' },
-            { text: 'Connection', link: '/apps/reddit/connection' },
+            { text: "Triggers", link: "/apps/reddit/triggers" },
+            { text: "Actions", link: "/apps/reddit/actions" },
+            { text: "Connection", link: "/apps/reddit/connection" },
           ],
         },
         {
-          text: 'Remove.bg',
+          text: "Remove.bg",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/removebg/actions' },
-            { text: 'Connection', link: '/apps/removebg/connection' },
+            { text: "Actions", link: "/apps/removebg/actions" },
+            { text: "Connection", link: "/apps/removebg/connection" },
           ],
         },
         {
-          text: 'RSS',
+          text: "RSS",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/rss/triggers' },
-            { text: 'Connection', link: '/apps/rss/connection' },
+            { text: "Triggers", link: "/apps/rss/triggers" },
+            { text: "Connection", link: "/apps/rss/connection" },
           ],
         },
         {
-          text: 'Salesforce',
+          text: "Salesforce",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/salesforce/triggers' },
-            { text: 'Actions', link: '/apps/salesforce/actions' },
-            { text: 'Connection', link: '/apps/salesforce/connection' },
+            { text: "Triggers", link: "/apps/salesforce/triggers" },
+            { text: "Actions", link: "/apps/salesforce/actions" },
+            { text: "Connection", link: "/apps/salesforce/connection" },
           ],
         },
         {
-          text: 'Scheduler',
+          text: "Scheduler",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/scheduler/triggers' },
-            { text: 'Connection', link: '/apps/scheduler/connection' },
+            { text: "Triggers", link: "/apps/scheduler/triggers" },
+            { text: "Connection", link: "/apps/scheduler/connection" },
           ],
         },
         {
-          text: 'SignalWire',
+          text: "SignalWire",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/signalwire/triggers' },
-            { text: 'Actions', link: '/apps/signalwire/actions' },
-            { text: 'Connection', link: '/apps/signalwire/connection' },
+            { text: "Triggers", link: "/apps/signalwire/triggers" },
+            { text: "Actions", link: "/apps/signalwire/actions" },
+            { text: "Connection", link: "/apps/signalwire/connection" },
           ],
         },
         {
-          text: 'Slack',
+          text: "Slack",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/slack/actions' },
-            { text: 'Connection', link: '/apps/slack/connection' },
+            { text: "Actions", link: "/apps/slack/actions" },
+            { text: "Connection", link: "/apps/slack/connection" },
           ],
         },
         {
-          text: 'SMTP',
+          text: "SMTP",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/smtp/actions' },
-            { text: 'Connection', link: '/apps/smtp/connection' },
+            { text: "Actions", link: "/apps/smtp/actions" },
+            { text: "Connection", link: "/apps/smtp/connection" },
           ],
         },
         {
-          text: 'Spotify',
+          text: "Spotify",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/spotify/actions' },
-            { text: 'Connection', link: '/apps/spotify/connection' },
+            { text: "Actions", link: "/apps/spotify/actions" },
+            { text: "Connection", link: "/apps/spotify/connection" },
           ],
         },
         {
-          text: 'Strava',
+          text: "Strava",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/strava/actions' },
-            { text: 'Connection', link: '/apps/strava/connection' },
+            { text: "Actions", link: "/apps/strava/actions" },
+            { text: "Connection", link: "/apps/strava/connection" },
           ],
         },
         {
-          text: 'Stripe',
+          text: "Stripe",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/stripe/triggers' },
-            { text: 'Connection', link: '/apps/stripe/connection' },
+            { text: "Triggers", link: "/apps/stripe/triggers" },
+            { text: "Connection", link: "/apps/stripe/connection" },
           ],
         },
         {
-          text: 'Telegram',
+          text: "Telegram",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/telegram-bot/actions' },
-            { text: 'Connection', link: '/apps/telegram-bot/connection' },
+            { text: "Actions", link: "/apps/telegram-bot/actions" },
+            { text: "Connection", link: "/apps/telegram-bot/connection" },
           ],
         },
         {
-          text: 'Todoist',
+          text: "Todoist",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/todoist/triggers' },
-            { text: 'Actions', link: '/apps/todoist/actions' },
-            { text: 'Connection', link: '/apps/todoist/connection' },
+            { text: "Triggers", link: "/apps/todoist/triggers" },
+            { text: "Actions", link: "/apps/todoist/actions" },
+            { text: "Connection", link: "/apps/todoist/connection" },
           ],
         },
         {
-          text: 'Trello',
+          text: "Trello",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/trello/actions' },
-            { text: 'Connection', link: '/apps/trello/connection' },
+            { text: "Actions", link: "/apps/trello/actions" },
+            { text: "Connection", link: "/apps/trello/connection" },
           ],
         },
         {
-          text: 'Twilio',
+          text: "Twilio",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/twilio/triggers' },
-            { text: 'Actions', link: '/apps/twilio/actions' },
-            { text: 'Connection', link: '/apps/twilio/connection' },
+            { text: "Triggers", link: "/apps/twilio/triggers" },
+            { text: "Actions", link: "/apps/twilio/actions" },
+            { text: "Connection", link: "/apps/twilio/connection" },
           ],
         },
         {
-          text: 'Twitter',
+          text: "Twitter",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/twitter/triggers' },
-            { text: 'Actions', link: '/apps/twitter/actions' },
-            { text: 'Connection', link: '/apps/twitter/connection' },
+            { text: "Triggers", link: "/apps/twitter/triggers" },
+            { text: "Actions", link: "/apps/twitter/actions" },
+            { text: "Connection", link: "/apps/twitter/connection" },
           ],
         },
         {
-          text: 'Typeform',
+          text: "Typeform",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/typeform/triggers' },
-            { text: 'Connection', link: '/apps/typeform/connection' },
+            { text: "Triggers", link: "/apps/typeform/triggers" },
+            { text: "Connection", link: "/apps/typeform/connection" },
           ],
         },
         {
-          text: 'Webhooks',
+          text: "Webhooks",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/webhooks/triggers' },
-            { text: 'Connection', link: '/apps/webhooks/connection' },
+            { text: "Triggers", link: "/apps/webhooks/triggers" },
+            { text: "Connection", link: "/apps/webhooks/connection" },
           ],
         },
         {
-          text: 'WordPress',
+          text: "WordPress",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/wordpress/triggers' },
-            { text: 'Connection', link: '/apps/wordpress/connection' },
+            { text: "Triggers", link: "/apps/wordpress/triggers" },
+            { text: "Connection", link: "/apps/wordpress/connection" },
           ],
         },
         {
-          text: 'Xero',
+          text: "Xero",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/xero/triggers' },
-            { text: 'Connection', link: '/apps/xero/connection' },
+            { text: "Triggers", link: "/apps/xero/triggers" },
+            { text: "Connection", link: "/apps/xero/connection" },
           ],
         },
         {
-          text: 'Youtube',
+          text: "Youtube",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Triggers', link: '/apps/youtube/triggers' },
-            { text: 'Connection', link: '/apps/youtube/connection' },
+            { text: "Triggers", link: "/apps/youtube/triggers" },
+            { text: "Connection", link: "/apps/youtube/connection" },
           ],
         },
         {
-          text: 'Zendesk',
+          text: "Zendesk",
           collapsible: true,
           collapsed: true,
           items: [
-            { text: 'Actions', link: '/apps/zendesk/actions' },
-            { text: 'Connection', link: '/apps/zendesk/connection' },
+            { text: "Actions", link: "/apps/zendesk/actions" },
+            { text: "Connection", link: "/apps/zendesk/connection" },
           ],
         },
       ],
-      '/': [
+      "/": [
         {
-          text: 'Getting Started',
+          text: "Getting Started",
           collapsible: true,
           items: [
             {
-              text: 'What is Automatisch?',
-              link: '/',
-              activeMatch: '/',
+              text: "What is Automatisch?",
+              link: "/",
+              activeMatch: "/",
             },
-            { text: 'Installation', link: '/guide/installation' },
-            { text: 'Key concepts', link: '/guide/key-concepts' },
-            { text: 'Create flow', link: '/guide/create-flow' },
+            { text: "Installation", link: "/guide/installation" },
+            { text: "Key concepts", link: "/guide/key-concepts" },
+            { text: "Create flow", link: "/guide/create-flow" },
           ],
         },
         {
-          text: 'Integrations',
+          text: "Integrations",
           collapsible: true,
           items: [
-            { text: 'Available apps', link: '/guide/available-apps' },
+            { text: "Available apps", link: "/guide/available-apps" },
             {
-              text: 'Request integration',
-              link: '/guide/request-integration',
-            },
-          ],
-        },
-        {
-          text: 'Advanced',
-          collapsible: true,
-          items: [
-            { text: 'Configuration', link: '/advanced/configuration' },
-            { text: 'Credentials', link: '/advanced/credentials' },
-            { text: 'Telemetry', link: '/advanced/telemetry' },
-          ],
-        },
-        {
-          text: 'Contributing',
-          collapsible: true,
-          items: [
-            {
-              text: 'Contribution guide',
-              link: '/contributing/contribution-guide',
-            },
-            {
-              text: 'Development setup',
-              link: '/contributing/development-setup',
-            },
-            {
-              text: 'Repository structure',
-              link: '/contributing/repository-structure',
+              text: "Request integration",
+              link: "/guide/request-integration",
             },
           ],
         },
         {
-          text: 'Build Integrations',
+          text: "Advanced",
+          collapsible: true,
+          items: [
+            { text: "Configuration", link: "/advanced/configuration" },
+            { text: "Credentials", link: "/advanced/credentials" },
+            { text: "Telemetry", link: "/advanced/telemetry" },
+          ],
+        },
+        {
+          text: "Contributing",
           collapsible: true,
           items: [
             {
-              text: 'Folder structure',
-              link: '/build-integrations/folder-structure',
+              text: "Contribution guide",
+              link: "/contributing/contribution-guide",
             },
             {
-              text: 'App',
-              link: '/build-integrations/app',
+              text: "Development setup",
+              link: "/contributing/development-setup",
             },
             {
-              text: 'Global variable',
-              link: '/build-integrations/global-variable',
-            },
-            {
-              text: 'Auth',
-              link: '/build-integrations/auth',
-            },
-            {
-              text: 'Triggers',
-              link: '/build-integrations/triggers',
-            },
-            {
-              text: 'Actions',
-              link: '/build-integrations/actions',
-            },
-            {
-              text: 'Examples',
-              link: '/build-integrations/examples',
+              text: "Repository structure",
+              link: "/contributing/repository-structure",
             },
           ],
         },
         {
-          text: 'Other',
+          text: "Build Integrations",
           collapsible: true,
           items: [
-            { text: 'License', link: '/other/license' },
-            { text: 'Community', link: '/other/community' },
+            {
+              text: "Folder structure",
+              link: "/build-integrations/folder-structure",
+            },
+            {
+              text: "App",
+              link: "/build-integrations/app",
+            },
+            {
+              text: "Global variable",
+              link: "/build-integrations/global-variable",
+            },
+            {
+              text: "Auth",
+              link: "/build-integrations/auth",
+            },
+            {
+              text: "Triggers",
+              link: "/build-integrations/triggers",
+            },
+            {
+              text: "Actions",
+              link: "/build-integrations/actions",
+            },
+            {
+              text: "Examples",
+              link: "/build-integrations/examples",
+            },
+          ],
+        },
+        {
+          text: "Other",
+          collapsible: true,
+          items: [
+            { text: "License", link: "/other/license" },
+            { text: "Community", link: "/other/community" },
           ],
         },
       ],
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/automatisch/automatisch' },
-      { icon: 'twitter', link: 'https://twitter.com/automatischio' },
-      { icon: 'discord', link: 'https://discord.gg/dJSah9CVrC' },
+      {
+        icon: "github",
+        link: "https://github.com/youssefmohamed97/LinkHub-proj",
+      },
+      { icon: "twitter", link: "https://twitter.com/automatischio" },
+      { icon: "discord", link: "https://discord.gg/dJSah9CVrC" },
     ],
     editLink: {
       pattern:
-        'https://github.com/automatisch/automatisch/edit/main/packages/docs/pages/:path',
-      text: 'Edit this page on GitHub',
+        "https://github.com/youssefmohamed97/LinkHub-proj/edit/main/packages/docs/pages/:path",
+      text: "Edit this page on GitHub",
     },
     footer: {
-      copyright: 'Copyright © 2022 LinkHub. All rights reserved.',
+      copyright: "Copyright © 2022 LinkHub. All rights reserved.",
     },
     algolia: {
-      appId: 'I7I8MRYC3P',
-      apiKey: '9325eb970bdd6a70b1e35528b39ed2fe',
-      indexName: 'automatisch',
+      appId: "I7I8MRYC3P",
+      apiKey: "9325eb970bdd6a70b1e35528b39ed2fe",
+      indexName: "automatisch",
     },
   },
 
   async transformHead(ctx) {
-    if (ctx.pageData.relativePath === '') return; // Skip 404 page.
+    if (ctx.pageData.relativePath === "") return; // Skip 404 page.
 
-    const isHomepage = ctx.pageData.relativePath === 'index.md';
+    const isHomepage = ctx.pageData.relativePath === "index.md";
     let canonicalUrl = PROD_BASE_URL;
 
     if (!isHomepage) {
       canonicalUrl =
-        `${canonicalUrl}/` + ctx.pageData.relativePath.replace('.md', '');
+        `${canonicalUrl}/` + ctx.pageData.relativePath.replace(".md", "");
     }
 
     // Added for logging purposes to check if there is something
     // wrong with the canonical URL in the deployment pipeline.
-    console.log('');
-    console.log('File path: ', ctx.pageData.relativePath);
-    console.log('Canonical URL: ', canonicalUrl);
+    console.log("");
+    console.log("File path: ", ctx.pageData.relativePath);
+    console.log("Canonical URL: ", canonicalUrl);
 
     return [
       [
-        'link',
+        "link",
         {
-          rel: 'canonical',
+          rel: "canonical",
           href: canonicalUrl,
         },
       ],
       [
-        'script',
+        "script",
         {
           defer: true,
-          'data-domain': 'automatisch.io',
-          'data-api': 'https://automatisch.io/data/api/event',
-          src: 'https://automatisch.io/data/js/script.js',
+          "data-domain": "automatisch.io",
+          "data-api": "https://automatisch.io/data/api/event",
+          src: "https://automatisch.io/data/js/script.js",
         },
       ],
     ];
@@ -650,12 +653,12 @@ export default defineConfig({
 
   async transformHtml(_, id, { pageData }) {
     if (!/[\\/]404\.html$/.test(id)) {
-      let url = pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2');
+      let url = pageData.relativePath.replace(/((^|\/)index)?\.md$/, "$2");
 
-      const isHomepage = url === '';
+      const isHomepage = url === "";
 
       if (isHomepage) {
-        url = '/docs';
+        url = "/docs";
       }
 
       links.push({
@@ -670,7 +673,7 @@ export default defineConfig({
       hostname: `${PROD_BASE_URL}/`,
     });
 
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'));
+    const writeStream = createWriteStream(resolve(outDir, "sitemap.xml"));
     sitemap.pipe(writeStream);
     links.forEach((link) => sitemap.write(link));
     sitemap.end();

@@ -24,7 +24,7 @@
 </style>
 
 <script setup>
-import DefaultTheme from 'vitepress/theme';
+import DefaultTheme from "vitepress/theme";
 
 const { Layout } = DefaultTheme;
 </script>
@@ -38,7 +38,7 @@ const { Layout } = DefaultTheme;
           star on
           <strong
             ><a
-              href="https://github.com/automatisch/automatisch"
+              href="https://github.com/youssefmohamed97/LinkHub-proj"
               target="_blank"
               rel="noreferrer"
               >GitHub</a

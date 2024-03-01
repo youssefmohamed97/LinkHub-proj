@@ -24,7 +24,7 @@ The official documentation can be found here: [https://automatisch.io/docs](http
 
 ```bash
 # Clone the repository
-git clone https://github.com/automatisch/automatisch.git
+git clone https://github.com/youssefmohamed97/LinkHub-proj.git
 
 # Go to the repository folder
 cd automatisch
@@ -46,7 +46,7 @@ For other installation types, you can check the [installation](https://automatis
 
 If you have any questions or problems, please visit our GitHub issues page, and we'll try to help you as soon as possible.
 
-[https://github.com/automatisch/automatisch/issues](https://github.com/automatisch/automatisch/issues)
+[https://github.com/youssefmohamed97/LinkHub-proj/issues](https://github.com/youssefmohamed97/LinkHub-proj/issues)
 
 ## License
 

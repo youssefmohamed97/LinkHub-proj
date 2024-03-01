@@ -18,7 +18,7 @@ We use [conventional commit messages](https://www.conventionalcommits.org) to ge
 
 ## Report bugs using GitHub issues
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/automatisch/automatisch/issues/new).
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/youssefmohamed97/LinkHub-proj/issues/new).
 
 ## License
 

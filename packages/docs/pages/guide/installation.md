@@ -1,7 +1,7 @@
 # Installation
 
 :::info
-We have installation guides for docker compose and docker setup at the moment, but if you need another installation type, let us know by [creating a GitHub issue](https://github.com/automatisch/automatisch/issues/new).
+We have installation guides for docker compose and docker setup at the moment, but if you need another installation type, let us know by [creating a GitHub issue](https://github.com/youssefmohamed97/LinkHub-proj/issues/new).
 :::
 
 :::tip
@@ -94,7 +94,7 @@ You can use the `openssl rand -base64 36` command in your terminal to generate a
 
 ## Render
 
-<a href="https://render.com/deploy?repo=https://github.com/automatisch/automatisch">
+<a href="https://render.com/deploy?repo=https://github.com/youssefmohamed97/LinkHub-proj">
   <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
 
@@ -110,4 +110,4 @@ If you need to change any other environment variables for your production setup,
 
 ## Let's discover!
 
-If you see any problems while installing Automatisch, let us know via [github issues](https://github.com/automatisch/automatisch/issues) or our [discord server](https://discord.gg/dJSah9CVrC).
+If you see any problems while installing Automatisch, let us know via [github issues](https://github.com/youssefmohamed97/LinkHub-proj/issues) or our [discord server](https://discord.gg/dJSah9CVrC).

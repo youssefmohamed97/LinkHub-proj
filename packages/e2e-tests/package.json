@@ -12,16 +12,16 @@
   "contributors": [
     {
       "name": "automatisch contributors",
-      "url": "https://github.com/automatisch/automatisch/graphs/contributors"
+      "url": "https://github.com/youssefmohamed97/LinkHub-proj/graphs/contributors"
     }
   ],
-  "homepage": "https://github.com/automatisch/automatisch#readme",
+  "homepage": "https://github.com/youssefmohamed97/LinkHub-proj#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/automatisch/automatisch.git"
+    "url": "git+https://github.com/youssefmohamed97/LinkHub-proj.git"
   },
   "bugs": {
-    "url": "https://github.com/automatisch/automatisch/issues"
+    "url": "https://github.com/youssefmohamed97/LinkHub-proj/issues"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",

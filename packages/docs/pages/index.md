@@ -40,4 +40,4 @@ Visit our [installation guide](/guide/installation) to setup Automatisch. It's r
 
 ## Something missing?
 
-If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please [file an issue](https://github.com/automatisch/automatisch/issues) for us, or send a tweet mentioning the [@automatischio](https://twitter.com/automatischio) Twitter account.
+If you find issues with the documentation or have suggestions on how to improve the documentation or the project in general, please [file an issue](https://github.com/youssefmohamed97/LinkHub-proj/issues) for us, or send a tweet mentioning the [@automatischio](https://twitter.com/automatischio) Twitter account.

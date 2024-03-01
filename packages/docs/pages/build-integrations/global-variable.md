@@ -22,7 +22,7 @@ The global variable is represented as `$` variable in the codebase, and it's a J
 
 ```javascript
 await $.auth.set({
-  key: 'value',
+  key: "value",
 });
 ```
 
@@ -65,9 +65,9 @@ It's used to retrieve the fields that we defined in the `auth` section of the ap
 It's an HTTP client to be used for making HTTP requests. It's a wrapper around the [axios](https://axios-http.com) library. We use this property when we need to make HTTP requests to the third-party service. The `apiBaseUrl` field we set up in the app will be used as the base URL for the HTTP requests. For example, to search the cat images, we can use the following code:
 
 ```javascript
-await $.http.get('/v1/images/search?order=DESC', {
+await $.http.get("/v1/images/search?order=DESC", {
   headers: {
-    'x-api-key': $.auth.data.apiKey,
+    "x-api-key": $.auth.data.apiKey,
   },
 });
 ```
@@ -80,7 +80,7 @@ Keep in mind that the HTTP client handles the error with the status code that fa
 $.step.parameters; // { key: 'value' }
 ```
 
-It refers to the parameters that are set by users in the UI. We use this property when we need to get the parameters for corresponding triggers and actions. For example [Send a message to channel](https://github.com/automatisch/automatisch/blob/main/packages/backend/src/apps/slack/actions/send-a-message-to-channel/post-message.js) action from Slack integration, we have a step parameter called `message` that we need to use in the action. We can use `$.step.parameters.message` to get the value of the message to send a message to the Slack channel.
+It refers to the parameters that are set by users in the UI. We use this property when we need to get the parameters for corresponding triggers and actions. For example [Send a message to channel](https://github.com/youssefmohamed97/LinkHub-proj/blob/main/packages/backend/src/apps/slack/actions/send-a-message-to-channel/post-message.js) action from Slack integration, we have a step parameter called `message` that we need to use in the action. We can use `$.step.parameters.message` to get the value of the message to send a message to the Slack channel.
 
 ## $.pushTriggerItem
 

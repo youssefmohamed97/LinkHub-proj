@@ -63,15 +63,15 @@
   "contributors": [
     {
       "name": "automatisch contributors",
-      "url": "https://github.com/automatisch/automatisch/graphs/contributors"
+      "url": "https://github.com/youssefmohamed97/LinkHub-proj/graphs/contributors"
     }
   ],
   "bugs": {
-    "url": "https://github.com/automatisch/automatisch/issues"
+    "url": "https://github.com/youssefmohamed97/LinkHub-proj/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/automatisch/automatisch.git"
+    "url": "git+https://github.com/youssefmohamed97/LinkHub-proj.git"
   },
   "browserslist": {
     "production": [
