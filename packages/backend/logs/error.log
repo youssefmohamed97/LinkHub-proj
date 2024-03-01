@@ -1,0 +1,164 @@
+2024-02-28 22:57:00:570 [[31merror[39m]: [31mMake sure you have installed PostgreSQL and it is running.[39m
+2024-02-28 22:59:34:5934 [[31merror[39m]: [31mMake sure you have installed Redis and it is running. connect ECONNREFUSED 127.0.0.1:6379[39m
+2024-02-29 01:23:00:230 [[31merror[39m]: [31mverifyConnection : {[39m
+[31m  "status": 404,[39m
+[31m  "error": {[39m
+[31m    "message": "Not Found"[39m
+[31m  }[39m
+[31m}[39m
+[31mHttpError: {[39m
+[31m  "status": 404,[39m
+[31m  "error": {[39m
+[31m    "message": "Not Found"[39m
+[31m  }[39m
+[31m}[39m
+[31m    at file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/helpers/http-client/index.js:63:13[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async Object.verifyCredentials (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/apps/ringcentral/auth/verify-credentials.js:2:3)[39m
+[31m    at async Object.verifyConnection (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/mutations/verify-connection.js:16:3)[39m
+[31m    at async middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:24)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 01:42:11:4211 [[31merror[39m]: [31mgetRoles : Not authorized![39m
+[31mError: Not authorized![39m
+[31m    at User.can (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/models/user.js:299:21)[39m
+[31m    at Object.getRoles (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/queries/get-roles.ee.js:4:23)[39m
+[31m    at file:///Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-middleware/dist/applicator.mjs:5:112[39m
+[31m    at middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:30)[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async Promise.all (index 0)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 01:42:11:4211 [[31merror[39m]: [31mgetRoles : Not authorized![39m
+[31mError: Not authorized![39m
+[31m    at User.can (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/models/user.js:299:21)[39m
+[31m    at Object.getRoles (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/queries/get-roles.ee.js:4:23)[39m
+[31m    at file:///Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-middleware/dist/applicator.mjs:5:112[39m
+[31m    at middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:30)[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async Promise.all (index 0)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 01:42:36:4236 [[31merror[39m]: [31mgetRoles : Not authorized![39m
+[31mError: Not authorized![39m
+[31m    at User.can (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/models/user.js:299:21)[39m
+[31m    at Object.getRoles (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/queries/get-roles.ee.js:4:23)[39m
+[31m    at file:///Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-middleware/dist/applicator.mjs:5:112[39m
+[31m    at middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:30)[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async Promise.all (index 0)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 02:19:59:1959 [[31merror[39m]: [31mupdateStep : An application with the "undefined" key couldn't be found.[39m
+[31mError: An application with the "undefined" key couldn't be found.[39m
+[31m    at getAppDefaultExport (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/helpers/get-app.js:25:11)[39m
+[31m    at getApp (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/helpers/get-app.js:38:33)[39m
+[31m    at App.findOneByKey (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/models/app.js:37:30)[39m
+[31m    at App.checkAppAndTrigger (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/models/app.js:57:28)[39m
+[31m    at Object.updateStep (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/mutations/update-step.js:46:15)[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:24)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 02:25:45:2545 [[31merror[39m]: [31mupdateFlow : NotFoundError[39m
+[31mNotFoundError: NotFoundError[39m
+[31m    at Flow.createNotFoundError (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/model/Model.js:342:12)[39m
+[31m    at ExtendedQueryBuilder.<anonymous> (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:461:33)[39m
+[31m    at RunAfterOperation.onAfter3 (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/operations/RunAfterOperation.js:17:22)[39m
+[31m    at ExtendedQueryBuilder.callAsyncOperationMethod (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilderOperationSupport.js:387:39)[39m
+[31m    at /Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:1143:19[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async ExtendedQueryBuilder.execute (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:447:14)[39m
+[31m    at async Object.updateFlow (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/mutations/update-flow.js:4:14)[39m
+[31m    at async middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:24)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 02:25:48:2548 [[31merror[39m]: [31mupdateFlow : NotFoundError[39m
+[31mNotFoundError: NotFoundError[39m
+[31m    at Flow.createNotFoundError (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/model/Model.js:342:12)[39m
+[31m    at ExtendedQueryBuilder.<anonymous> (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:461:33)[39m
+[31m    at RunAfterOperation.onAfter3 (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/operations/RunAfterOperation.js:17:22)[39m
+[31m    at ExtendedQueryBuilder.callAsyncOperationMethod (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilderOperationSupport.js:387:39)[39m
+[31m    at /Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:1143:19[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async ExtendedQueryBuilder.execute (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:447:14)[39m
+[31m    at async Object.updateFlow (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/mutations/update-flow.js:4:14)[39m
+[31m    at async middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:24)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 02:25:50:2550 [[31merror[39m]: [31mupdateFlow : NotFoundError[39m
+[31mNotFoundError: NotFoundError[39m
+[31m    at Flow.createNotFoundError (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/model/Model.js:342:12)[39m
+[31m    at ExtendedQueryBuilder.<anonymous> (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:461:33)[39m
+[31m    at RunAfterOperation.onAfter3 (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/operations/RunAfterOperation.js:17:22)[39m
+[31m    at ExtendedQueryBuilder.callAsyncOperationMethod (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilderOperationSupport.js:387:39)[39m
+[31m    at /Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:1143:19[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async ExtendedQueryBuilder.execute (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:447:14)[39m
+[31m    at async Object.updateFlow (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/mutations/update-flow.js:4:14)[39m
+[31m    at async middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:24)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 02:25:53:2553 [[31merror[39m]: [31mupdateFlow : NotFoundError[39m
+[31mNotFoundError: NotFoundError[39m
+[31m    at Flow.createNotFoundError (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/model/Model.js:342:12)[39m
+[31m    at ExtendedQueryBuilder.<anonymous> (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:461:33)[39m
+[31m    at RunAfterOperation.onAfter3 (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/operations/RunAfterOperation.js:17:22)[39m
+[31m    at ExtendedQueryBuilder.callAsyncOperationMethod (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilderOperationSupport.js:387:39)[39m
+[31m    at /Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:1143:19[39m
+[31m    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[39m
+[31m    at async ExtendedQueryBuilder.execute (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/objection/lib/queryBuilder/QueryBuilder.js:447:14)[39m
+[31m    at async Object.updateFlow (file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/graphql/mutations/update-flow.js:4:14)[39m
+[31m    at async middleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/generator.js:30:24)[39m
+[31m    at async graphqlMiddleware (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/express-graphql/index.js:125:26)[39m
+2024-02-29 10:53:46:5346 [[31merror[39m]: [31mgetTrialStatus : Not Authorised![39m
+[31mError: Not Authorised![39m
+[31m    at normalizeOptions (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/shield.js:26:44)[39m
+[31m    at shield (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/shield.js:39:31)[39m
+[31m    at file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/helpers/authentication.js:64:24[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)[39m
+[31m    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)[39m
+[31m    at async loadESM (node:internal/process/esm_loader:28:7)[39m
+[31m    at async handleMainPromise (node:internal/modules/run_main:120:12)[39m
+2024-02-29 10:53:46:5346 [[31merror[39m]: [31mgetCurrentUser : Not Authorised![39m
+[31mError: Not Authorised![39m
+[31m    at normalizeOptions (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/shield.js:26:44)[39m
+[31m    at shield (/Users/youssefmohamed/Documents/Bitbucket/Rss/node_modules/graphql-shield/dist/shield.js:39:31)[39m
+[31m    at file:///Users/youssefmohamed/Documents/Bitbucket/Rss/packages/backend/src/helpers/authentication.js:64:24[39m
+[31m    at ModuleJob.run (node:internal/modules/esm/module_job:218:25)[39m
+[31m    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)[39m
+[31m    at async loadESM (node:internal/process/esm_loader:28:7)[39m
+[31m    at async handleMainPromise (node:internal/modules/run_main:120:12)[39m
+2024-02-29 15:56:35:5635 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:08:00:80 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:10:00:100 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:12:00:120 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:26:00:260 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:28:00:280 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:30:00:300 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:30:00:300 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND rss.cnn.com[39m
+2024-02-29 17:30:00:300 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:32:00:320 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:34:00:340 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:36:00:360 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:38:00:380 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 17:40:00:400 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 18:47:00:470 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 18:47:01:471 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-02-29 18:47:01:471 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND rss.cnn.com[39m
+2024-02-29 19:00:07:07 [[31merror[39m]: [31mread ECONNRESET[39m
+2024-03-01 04:44:01:441 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 04:45:08:458 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 04:45:16:4516 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND rss.cnn.com[39m
+2024-03-01 16:58:24:5824 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 17:00:24:024 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 17:00:24:024 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND rss.cnn.com[39m
+2024-03-01 17:00:24:024 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 17:30:19:3019 [[31merror[39m]: [31msocket hang up[39m
+2024-03-01 21:36:30:3630 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 21:37:00:370 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:37:31:3731 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:38:30:3830 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 21:39:00:390 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:39:30:3930 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:40:31:4031 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 21:41:03:413 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:41:33:4133 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:42:30:4230 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 21:43:00:430 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:43:30:4330 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:44:30:4430 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
+2024-03-01 21:45:00:450 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www1.cbn.com[39m
+2024-03-01 21:45:30:4530 [[31merror[39m]: [31mgetaddrinfo ENOTFOUND www.upwork.com[39m
