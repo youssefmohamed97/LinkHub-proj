@@ -2,6 +2,9 @@
 
 set -e
 
+# Create the /automatisch/storage/ directory if it doesn't exist
+mkdir -p /automatisch/storage/
+
 if [ ! -f /automatisch/storage/.env ]; then
   >&2 echo "Saving environment variables"
   ENCRYPTION_KEY="${ENCRYPTION_KEY:-$(openssl rand -base64 36)}"
@@ -23,4 +26,5 @@ fi
 
 echo "Environment variables have been set!"
 
+# Execute the main command
 sh /entrypoint.sh

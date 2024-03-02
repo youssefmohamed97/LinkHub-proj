@@ -1,24 +1,24 @@
-# syntax=docker/dockerfile:1
-FROM node:18-alpine
+# # syntax=docker/dockerfile:1
+# FROM node:18-alpine
 
-ENV PORT 3000
+# ENV PORT 3000
 
-RUN \
-  apk --no-cache add --virtual build-dependencies python3 build-base git
+# RUN \
+#   apk --no-cache add --virtual build-dependencies python3 build-base git
 
-RUN git clone https://github.com/youssefmohamed97/LinkHub-proj.git
+# RUN git clone https://github.com/youssefmohamed97/LinkHub-proj.git
 
-WORKDIR /automatisch
+# WORKDIR /app
 
-RUN yarn install
+# RUN yarn install
 
-RUN if [ "$WORKER" != "true" ]; then cd packages/web && yarn build; fi
+# RUN if [ "$WORKER" != "true" ]; then cd packages/web && yarn build; fi
 
-RUN \
-  rm -rf /usr/local/share/.cache/ && \
-  apk del build-dependencies
+# RUN \
+#   rm -rf /usr/local/share/.cache/ && \
+#   apk del build-dependencies
 
-# COPY ./docker/entrypoint-cloud.sh /entrypoint-cloud.sh
+# COPY . /app
 
-EXPOSE 3000
-ENTRYPOINT ["sh", "/entrypoint-cloud.sh"]
+# EXPOSE 3000
+# # ENTRYPOINT ["sh", "/entrypoint-cloud.sh"]
