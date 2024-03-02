@@ -1,11 +1,20 @@
 # syntax=docker/dockerfile:1
-FROM automatischio/automatisch:0.10.0
-WORKDIR /automatisch
+FROM node:18-alpine
 
+# Set the working directory in the container
+WORKDIR /LinkHub-proj
+
+# Install necessary packages
 RUN apk add --no-cache openssl dos2unix
 
+# Copy the entrypoint script into the container
 COPY ./compose-entrypoint.sh /compose-entrypoint.sh
-RUN dos2unix /compose-entrypoint.sh
 
+# Copy your application code into the container
+COPY . /LinkHub-proj
+
+# Expose the port that your application runs on
 EXPOSE 3000
-ENTRYPOINT ["sh", "/compose-entrypoint.sh"]
+
+# Set the entrypoint script to run when the container starts
+ENTRYPOINT ["/compose-entrypoint.sh"]
