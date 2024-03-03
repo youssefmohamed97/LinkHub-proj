@@ -81,7 +81,7 @@ const appConfig = {
   smtpUser: process.env.SMTP_USER,
   smtpPassword: process.env.SMTP_PASSWORD,
   fromEmail: process.env.FROM_EMAIL,
-  isCloud: "false",
+  isCloud: process.env.AUTOMATISCH_CLOUD === "false",
   isSelfHosted: process.env.AUTOMATISCH_CLOUD !== "true",
   isMation: process.env.MATION === "true",
   paddleVendorId: Number(process.env.PADDLE_VENDOR_ID),

@@ -3,7 +3,7 @@
 set -e
 
 if [ -n "$WORKER" ]; then
-  automatisch start-worker
+  linkhub start-worker
 else
-  automatisch start
+  linkhub start
 fi
