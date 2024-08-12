@@ -14,9 +14,9 @@
 
 # RUN if [ "$WORKER" != "true" ]; then cd packages/web && yarn build; fi
 
-# RUN \
-#   rm -rf /usr/local/share/.cache/ && \
-#   apk del build-dependencies
+# # RUN \
+# #   # rm -rf /usr/local/share/.cache/ && \
+# #   # apk del build-dependencies
 
 # COPY . /app
 

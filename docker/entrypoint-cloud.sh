@@ -1,13 +1,13 @@
-#!/bin/sh
+# #!/bin/sh
 
-set -e
+# set -e
 
-cd packages/backend
+# cd packages/backend
 
-if [ -n "$WORKER" ]; then
-  yarn start:worker
-else
-  yarn db:migrate
-  yarn db:seed:user
-  yarn start
-fi
+# if [ -n "$WORKER" ]; then
+#   yarn start:worker
+# else
+#   yarn db:migrate
+#   yarn db:seed:user
+#   yarn start
+# fi

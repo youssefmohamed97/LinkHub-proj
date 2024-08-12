@@ -1,9 +1,9 @@
-#!/bin/sh
+# #!/bin/sh
 
-set -e
+# set -e
 
-if [ -n "$WORKER" ]; then
-  linkhub start-worker
-else
-  linkhub start
-fi
+# if [ -n "$WORKER" ]; then
+#   linkhub start-worker
+# else
+#   linkhub start
+# fi
